@@ -26,13 +26,13 @@ Records: 8,809 titles
 Format: CSV
 
 
-## 🧹 Data Cleaning & Preparation
+## 🧹 Data Cleaning & Preparation (ETL)
 
 The dataset was processed using Power BI (Power Query) to ensure data quality and usability.
 
 Key steps:
 
-### Removed irrelevant columns:
+### 🔧 Removed irrelevant columns:
 
 
 description (unstructured text not used in analysis)
@@ -40,15 +40,51 @@ cast and director (not aligned with current business questions)
 show_id (technical identifier with no analytical value)
 
 
-### Handled missing values:
+### 🔧 Handled missing values:
 Standardized null values in relevant fields (e.g., country)
 
+Country Column Normalization
+Detected multiple countries within single records (e.g., "USA, UK").
 
-### Data type transformations:
+Standardized the column by extracting the primary country (first value before delimiter).
+
+Trimmed extra spaces and ensured consistency.
+
+
+### 🔧 Data type transformations:
 Converted date_added to date format
-Extracted year and month for time-based analysis
-Feature engineering:
-Cleaned and structured duration field for analysis
+
+Extracted temporal features from date_added:
+
+year_added
+
+month_added
+
+month_name
+
+### 🔧 Duration Column Normalization
+
+The original duration column contained mixed formats:
+
+"90 min" (Movies)
+
+"2 Seasons" (TV Shows)
+
+Created structured fields:
+
+duration_value (numeric)
+
+duration_type (categorical: min / season)
+
+Cleaned and standardized values:
+Converted all text to lowercase, Unified "Seasons" and "Season" into "season" and  removed inconsistent and invalid records.
+
+Handling Inconsistent Data
+
+Identified and removed anomalous values in duration_type that did not match expected categories.
+Eliminated null values in critical fields where necessary.
+
+Preserved original date_added column for full time-based analysis.
 
 ### The dataset was processed using Power BI (Power Query) to ensure data quality and usability.
 
