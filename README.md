@@ -101,3 +101,72 @@ Country
 Time (year/month added)
 
 Duration
+
+
+## 🧠 Dashboard Planning & Business Understanding
+
+During this phase, the focus shifted from data preparation to defining the analytical approach and dashboard structure.
+
+### 🎯 Business Objective
+
+The main goal of this project is to analyze the content catalog of a streaming platform and identify patterns that support strategic decisions.
+
+---
+
+### ❓ Key Business Questions
+
+The analysis is guided by the following questions:
+
+* What type of content dominates the catalog?
+* How has the platform evolved over time?
+* What countries contribute the most content?
+* What combinations of country, genre, and type are most frequent?
+
+---
+
+### 🧩 Dashboard Structure Design
+
+The dashboard was structured into two main pages:
+
+#### Page 1 — Overview (Current State)
+
+* KPI section:
+
+  * Total titles
+  * % Movies vs TV Shows
+  * Peak year of content addition
+
+* Visual sections:
+
+  * Content growth over time
+  * Geographic distribution of content
+  * Content composition and distribution
+
+---
+
+#### Page 2 — Insights (Planned)
+
+* Deeper analysis of:
+
+  * Content evolution
+  * Country + genre + type combinations
+  * Simulated business metrics (e.g., engagement, value)
+
+---
+
+### 🧠 Design Approach
+
+The dashboard is designed to:
+
+* Prioritize business questions over visuals
+* Separate overview from insights
+* Maintain a clear narrative structure
+
+---
+
+### 📌 Status
+
+* Data cleaning completed ✅
+* Dashboard planning completed ✅
+* Ready for metric creation and dashboard development 🚀
+
